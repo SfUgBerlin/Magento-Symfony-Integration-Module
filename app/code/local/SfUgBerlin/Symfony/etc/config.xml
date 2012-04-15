@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<modules>
+		<SfUgBerlin_Symfony>
+			<version>0.0.1</version>
+		</SfUgBerlin_Symfony>
+	</modules>
+
+	<global>
+		<models>
+			<SfUgBerlin_Symfony>
+				<class>SfUgBerlin_Symfony_Model</class>
+			</SfUgBerlin_Symfony>
+		</models>
+		<events>
+			<controller_front_init_before>
+				<observers>
+					<SfUgBerlin_Symfony_main_observer>
+						<type>singleton</type>
+						<class>SfUgBerlin_Symfony/main_observer</class>
+						<method>initAutoloader</method>
+					</SfUgBerlin_Symfony_main_observer>
+				</observers>
+			</controller_front_init_before>
+			<!--
+			<controller_front_init_routers>
+				<observers>
+					<SfUgBerlin_Symfony_main_observer>
+						<type>singleton</type>
+						<class>SfUgBerlin_Symfony/main_observer</class>
+						<method>init</method>
+					</SfUgBerlin_Symfony_main_observer>
+				</observers>
+			</controller_front_init_routers>
+			-->
+		</events>
+	</global>
+
+	<default>
+
+	</default>
+</config>
